@@ -1,16 +1,31 @@
+import React from "react";
+import ReactDOM from "react-dom";
 
 
-const parent = React.createElement("div", {id:"parent"}, [
-    React.createElement("div", {id:"child"}, [
-    React.createElement("h1",{}, "i am h1 tag"),
-    React.createElement("h2", {}, "im an H2 tag"),
-    ]),
-    React.createElement("div", {id:"child"}, [
-    React.createElement("h1",{}, "i am h1 tag"),
-    React.createElement("h2", {}, "im an H2 tag"),
-])
-]);
+// JSX - HTML like syntax
+const Title = () => (
+<h1 className="head" tabIndex="5">
+Namaste using JSK </h1>
+);
+const data = 1000;
 
-console.log(parent);
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+const fn  =  () => true;
+    const HeadingComponent = () => (<div id="container"> 
+    <h1 className="head" tabIndex="5" > 
+    namaste using t  {data};
+    </h1>
+    <Title/>
+    <h1 className="heading">namaste react functional component</h1>
+    </div>
+   
+);
+const heading = React.createElement("h1", {id: "heading"}, "Namaste react");
+const root  = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<HeadingComponent/>);
+  
+
+// react components 
+//class based component - OLD
+//Functional component - NEW 
+// react function compnent
+// component composition 
